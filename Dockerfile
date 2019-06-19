@@ -14,6 +14,4 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl\
  && chgrp -R 0 /frp \
  && chmod -R g+rwX /frp
 
-WORKDIR /frp
-
-CMD ["sh","-c","frpc -c frpc.ini"] 
+CMD ["sh","-c","/frp/frpc -c /frp/frpc.ini"] 
